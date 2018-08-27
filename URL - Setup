@@ -1,6 +1,5 @@
 from lxml import html
 import requests
-import pandas as pd
 
 base_url = 'https://enterpriseefiling.fcc.gov/dataentry/public/tv/publicFacilityDetails.html?facilityId='
 FacID = [257, 267, 272]
