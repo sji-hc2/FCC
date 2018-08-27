@@ -1,0 +1,12 @@
+from lxml import html
+import requests
+import pandas as pd
+
+base_url = 'https://enterpriseefiling.fcc.gov/dataentry/public/tv/publicFacilityDetails.html?facilityId='
+FacID = [257, 267, 272]
+
+for fid in FacID:
+    url = base_url + str(fid)
+    print(url)
+    main_page = requests.get(url)
+    tree = html.fromstring(main_page.content)
